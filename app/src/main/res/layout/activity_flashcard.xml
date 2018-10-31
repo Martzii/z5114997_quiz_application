@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashcardActivity">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        <TextView
+            android:id="@+id/topbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115sp"
+            android:layout_marginLeft="115sp"
+            android:fontFamily="@font/cabin"
+            android:text="Flashcards"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header_user_account"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:menu="@menu/navigation_menu"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginRight="8dp">
+
+    </android.support.design.widget.NavigationView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="68dp"
+            android:text="For further study and recollection, refer to these flashcards" />
+
+        <TextView
+            android:id="@+id/question_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="154dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="168dp"
+            android:layout_marginBottom="544dp"
+            android:fontFamily="@font/cabin"
+            android:text="@string/question_1"
+            android:textColor="@color/colorButton"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/easyFlipView"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.135"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="154dp"
+            android:layout_marginRight="168dp" />
+
+        <TextView
+            android:id="@+id/prompt_doubletap"
+            android:layout_width="351dp"
+            android:layout_height="38dp"
+            android:layout_alignStart="@+id/easyFlipView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-7dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/hint_double_tap_the_screen_to_flip_the_card_press_next_when_you_re_done_with_the_question"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="15sp"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+
+            android:layout_marginBottom="68dp"
+            android:background="@drawable/button_border"
+            android:soundEffectsEnabled="true"
+            android:text="next"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/easyFlipView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:paddingRight="20dp"
+            app:flipDuration="400"
+            app:flipEnabled="true"
+            app:flipFrom="front"
+            app:flipOnTouch="true"
+            app:flipType="vertical">
+
+            <!-- Back Layout Goes Here -->
+            <!--imageview
+            android:gravity="center"
+            android:src="@drawable/astronaut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            /-->
+
+
+            <!-- Front Layout Goes Here -->
+            <!--imageview
+            android:gravity="center"
+            android:src="@drawable/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            /-->
+
+            <include layout="@layout/flashcard_back" />
+
+            <include layout="@layout/flashcard_front" />
+
+
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>
