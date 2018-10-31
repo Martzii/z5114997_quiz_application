@@ -8,6 +8,8 @@ Download entire file then run via Android Studio.
 Should run it on at least a 5" Screen
 
 Uses: 
-- Easy Flip View 
+- Easy Flip View API
 - Navigation Drawer (Slide to unlock)
-- Pdfviewer
+- Pdfviewer API
+- Youtube API
+- Android Design Suite google (28.0.0) 
