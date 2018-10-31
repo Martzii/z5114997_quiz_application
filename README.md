@@ -13,3 +13,6 @@ Uses:
 - Pdfviewer API
 - Youtube API
 - Android Design Suite google (28.0.0) 
+
+Sources: 
+Multiple Choice Quiz App tutorial by Coding in Flow - https://www.youtube.com/watch?v=PiCZQg4mhBQ&list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7&fbclid=IwAR00sWni925IlsvfJ1cD4vHI-9uHCqH3GtTuDHi66AnKvcyp5omyA1vojww
